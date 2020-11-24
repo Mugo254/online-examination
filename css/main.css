@@ -4,6 +4,7 @@ overflow-x:hidden;
 width:100%;
 font: 15px "Century Gothic", "Times Roman", sans-serif;
 background:#eee;
+min-height:550px;
 background-attachment:fixed;
 
 }
@@ -11,11 +12,27 @@ background-attachment:fixed;
 {
 min-height:540px;
 }
+.bg1
+{
+background:url(../image/bg.jpg);
+min-height:535px;
+}
+
+@font-face {
+   font-family: 'typo';
+    src: url('../fonts/typo.ttf');
+	}
+
+@font-face {
+   font-family: 'gothic';
+    src: url('../fonts/gothics.ttf');
+	}
 
 .panel{
 border-color:#eee;
-margin:10px;
-padding:10px;
+margin:40px;
+padding:20px;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
 }
 
 .title
@@ -23,11 +40,11 @@ padding:10px;
 font-family:'typo';
 }
 
-/* .header
+.header
 {
 background:#202020;
 height:70px;
-} */
+}
 .logo
 {
 font-family:'typo';
@@ -43,6 +60,20 @@ font: 16px "Century Gothic", "Times Roman", sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-size:20px;
 }
+
+
+.sub1
+{
+width:90px;
+color:#202020;
+background:orange;
+font-size:15px;
+height:35px;
+margin:20px;
+padding:10px;
+width:100px;
+}
+
 
 .sub
 {

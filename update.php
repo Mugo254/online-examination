@@ -4,7 +4,7 @@ session_start();
 $email=$_SESSION['email'];
 //delete feedback
 if(isset($_SESSION['key'])){
-if(@$_GET['fdid'] && $_SESSION['key']=='najma7785068889') {
+if(@$_GET['fdid'] && $_SESSION['key']=='1234567891236') {
 $id=@$_GET['fdid'];
 $result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
 header("location:dash.php?q=3");
@@ -13,7 +13,7 @@ header("location:dash.php?q=3");
 
 //delete user
 if(isset($_SESSION['key'])){
-if(@$_GET['demail'] && $_SESSION['key']=='najma7785068889') {
+if(@$_GET['demail'] && $_SESSION['key']=='1234567891236') {
 $demail=@$_GET['demail'];
 $r1 = mysqli_query($con,"DELETE FROM rank WHERE email='$demail' ") or die('Error');
 $r2 = mysqli_query($con,"DELETE FROM history WHERE email='$demail' ") or die('Error');
@@ -23,7 +23,7 @@ header("location:dash.php?q=1");
 }
 //remove quiz
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='1234567891236') {
 $eid=@$_GET['eid'];
 $result = mysqli_query($con,"SELECT * FROM questions WHERE eid='$eid' ") or die('Error');
 while($row = mysqli_fetch_array($result)) {
@@ -41,7 +41,7 @@ header("location:dash.php?q=5");
 
 //add quiz
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='1234567891236') {
 $name = $_POST['name'];
 $name= ucwords(strtolower($name));
 $total = $_POST['total'];
@@ -59,7 +59,7 @@ header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 
 //add question
 if(isset($_SESSION['key'])){
-if(@$_GET['q']== 'addqns' && $_SESSION['key']=='sunny7785068889') {
+if(@$_GET['q']== 'addqns' && $_SESSION['key']=='1234567891236') {
 $n=@$_GET['n'];
 $eid=@$_GET['eid'];
 $ch=@$_GET['ch'];
@@ -142,7 +142,7 @@ $r++;
 $s=$s+$sahi;
 $q=mysqli_query($con,"UPDATE `history` SET `score`=$s,`level`=$sn,`sahi`=$r, date= NOW()  WHERE  email = '$email' AND eid = '$eid'")or die('Error124');
 
-} 
+}
 else
 {
 $q=mysqli_query($con,"SELECT * FROM quiz WHERE eid='$eid' " )or die('Error129');
@@ -170,7 +170,7 @@ if($sn != $total)
 $sn++;
 header("location:account.php?q=quiz&step=2&eid=$eid&n=$sn&t=$total")or die('Error152');
 }
-else if( $_SESSION['key']!='sunny7785068889')
+else if( $_SESSION['key']!='1234567891236')
 {
 $q=mysqli_query($con,"SELECT score FROM history WHERE eid='$eid' AND email='$email'" )or die('Error156');
 while($row=mysqli_fetch_array($q) )
@@ -222,6 +222,3 @@ header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
 }
 
 ?>
-
-
-
